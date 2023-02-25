@@ -1,0 +1,7 @@
+{
+    "/api": {
+    "target": "https://artistsearchbackend.wl.r.appspot.com/",
+    "secure": false
+    }
+}
+    

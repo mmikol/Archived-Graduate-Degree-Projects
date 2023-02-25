@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+    <Document>
+        <!-- STYLING -->
+        <Style id="point">
+            <IconStyle>
+                <Icon>
+                    <href>http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+                </Icon>
+            </IconStyle>
+        </Style>
+
+        <Style id="line">
+            <LineStyle>
+                <colorMode>normal</colorMode>
+                <color>#ff000000</color>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+
+        <Style id="polygon">
+            <PolyStyle>
+                <color>#a00000ff</color>
+                <outline>0</outline>
+            </PolyStyle>
+        </Style>
+
+        <!-- POINTS -->
+        <Placemark>
+            <name>HOME</name>
+            <styleUrl>#point</styleUrl>
+            <Point>
+                <coordinates>-118.28250,34.01674</coordinates>
+            </Point>
+        </Placemark>
+
+        <Placemark>
+            <name>GEC</name>
+            <styleUrl>#point</styleUrl>
+            <Point>
+                <coordinates>-118.280298,34.020654</coordinates>
+            </Point>
+        </Placemark>
+
+        <Placemark>
+            <name>BKS</name>
+            <styleUrl>#point</styleUrl>
+            <Point>
+                <coordinates>-118.286338,34.020753</coordinates>
+            </Point>
+        </Placemark>
+
+        <Placemark>
+            <name>JKP</name>
+            <styleUrl>#point</styleUrl>
+            <Point>
+                <coordinates>-118.283034,34.019003</coordinates>
+            </Point>
+        </Placemark>
+
+        <Placemark>
+            <name>DML</name>
+            <styleUrl>#point</styleUrl>
+            <Point>
+                <coordinates>-118.284206,34.020439</coordinates>
+            </Point>
+        </Placemark>
+
+        <Placemark>
+            <name>LVL</name>
+            <styleUrl>#point</styleUrl>
+            <Point>
+                <coordinates>-118.282933,34.021716</coordinates>
+            </Point>
+        </Placemark>
+
+        <Placemark>
+            <name>IYH</name>
+            <styleUrl>#point</styleUrl>
+            <Point>
+                <coordinates>-118.288265,34.018645</coordinates>
+            </Point>
+        </Placemark>
+
+        <Placemark>
+            <name>SAL</name>
+            <styleUrl>#point</styleUrl>
+            <Point>
+                <coordinates>-118.289556,34.019390</coordinates>
+            </Point>
+        </Placemark>
+
+        <Placemark>
+            <name>SGM</name>
+            <styleUrl>#point</styleUrl>
+            <Point>
+                <coordinates>-118.289257,34.021228</coordinates>
+            </Point>
+        </Placemark>
+
+        <Placemark>
+            <name>CFX</name>
+            <styleUrl>#point</styleUrl>
+            <Point>
+                <coordinates>-118.288550,34.022219</coordinates>
+            </Point>
+        </Placemark>
+
+        <Placemark>
+            <name>LRC</name>
+            <styleUrl>#point</styleUrl>
+            <Point>
+                <coordinates>-118.287912,34.024359</coordinates>
+            </Point>
+        </Placemark>
+
+        <Placemark>
+            <name>MUS</name>
+            <styleUrl>#point</styleUrl>
+            <Point>
+                <coordinates>-118.285140,34.022996</coordinates>
+            </Point>
+        </Placemark>
+
+        <Placemark>
+            <name>SHR</name>
+            <styleUrl>#point</styleUrl>
+            <Point>
+                <coordinates>-118.281753,34.023551</coordinates>
+            </Point>
+        </Placemark>
+
+        <!-- CONVEX HULL -->
+        <Placemark>
+            <styleUrl>#polygon</styleUrl>
+            <Polygon>
+                <extrude>0</extrude>
+                <altitudeMode>relativeToGround</altitudeMode>
+                <outerBoundaryIs>
+                    <LinearRing>
+                        <coordinates>
+                            -118.2825,34.01674,5.
+                            -118.288265,34.018645,5.
+                            -118.289556,34.01939,5.
+                            -118.289257,34.021228,5.
+                            -118.287912,34.024359,5.
+                            -118.281753,34.023551,5.
+                            -118.280298,34.020654,5.
+                            -118.2825,34.01674,5.
+                        </coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+
+        <Placemark>
+            <styleUrl>#line</styleUrl>
+            <LineString>
+                <coordinates>
+                    -118.28250,34.01674
+                    -118.283034,34.019003
+                </coordinates>
+            </LineString>
+        </Placemark>
+
+        <Placemark>
+            <styleUrl>#line</styleUrl>
+            <LineString>
+                <coordinates>
+                    -118.28250,34.01674
+                    -118.284206,34.020439
+                </coordinates>
+            </LineString>
+        </Placemark>
+
+        <Placemark>
+            <styleUrl>#line</styleUrl>
+            <LineString>
+                <coordinates>
+                    -118.280298,34.020654
+                    -118.28250,34.01674
+                </coordinates>
+            </LineString>
+        </Placemark>
+
+        <Placemark>
+            <styleUrl>#line</styleUrl>
+            <LineString>
+                <coordinates>
+                    -118.282933,34.021716
+                    -118.28250,34.01674
+                </coordinates>
+            </LineString>
+        </Placemark>
+    </Document>
+</kml>

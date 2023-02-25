@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:background="@color/light_grey">
+    <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                tools:ignore="UselessParent">
+            <TextView
+                    android:id="@+id/artist_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:textColor="@color/black"/>
+            <TextView
+                    android:id="@+id/artist_birthday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="185dp"
+                    android:layout_marginEnd="15dp"
+                    android:textStyle="italic"
+                    android:textSize="17sp"
+                    android:textColor="@color/black"/>
+        </TableRow>
+    </TableLayout>
+    <ImageView android:id="@+id/favorites_icon"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="-10dp"
+               android:layout_marginStart="360dp"
+               android:layout_marginEnd="0dp"
+               tools:ignore="ContentDescription"/>
+    <TextView
+            android:id="@+id/artist_nationality"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="15dp"/>
+
+</LinearLayout>

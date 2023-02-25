@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+html, body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;  
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+article {
+    line-height: 1em;
+}
+
+footer {
+    height: 25px;
+    width: 100%;
+    margin: 150px auto auto auto;
+    background-color: #112B3C;
+    text-align: center;
+    vertical-align: center;
+}
+
+footer a {
+    margin: 0;
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    font-weight: 200;
+}
+
+header {
+    position: relative;
+    top: 0;
+    height: 40px;
+    margin: 0 0 50px 0;
+    width: 100%;
+    padding: 10px 0 0 10px;
+    background-color: rgb(241, 241, 241);
+    font-size: 20px;
+}
+
+p { 
+    margin: 0; 
+}
+
+#artsy-logo {
+    height: 10px;
+    width: auto;
+}
+
+#main {      
+    flex-grow: 1;
+}
+
+#search-bar {
+    height: 30px;
+    width: 500px;
+    border: 2px solid grey;
+    border-radius: 15px;
+    padding: 0 0 0 35px;
+}
+
+#search-bar:focus-within {
+    outline-color: orange;
+}
+
+#search-clear-button, #search-submit-button {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    position: absolute;
+    opacity: 0.25;
+}
+
+#search-clear-button:hover, #search-submit-button:hover {
+    opacity: 1;
+}
+
+#search-clear-button {
+    top: 10px;
+    left: 510px;
+    height: 15px;   
+    width: 15px;
+    background-image: url(/static/clear_icon.png);
+    background-size: cover;
+    z-index: 1;
+}
+
+#search-submit-button {
+    top: 7px;
+    left: 10px;
+    height: 20px;
+    width: 20px;
+    background-image: url(/static/search_icon.png);
+    background-size: cover;
+    z-index: 1;
+}
+
+.artist-biography {
+    text-align: left;
+    font-size: 12px;
+}
+
+.artist-birthyear, .artist-deathyear, .artist-name {
+    text-align: center;
+    font-size: 20px;
+}
+
+.artist-info {
+    text-align: center;
+}
+
+.artist-nationality {
+    text-align: center;
+    font-size: 15px;
+}
+
+.biography-wrapper {
+    position: relative;
+    display: none;
+    margin: 0 auto 50px auto;
+    width: 750px;
+    height: auto;
+    line-height: 1em;
+}
+
+.form-wrapper {
+    position: relative;
+    display: block;
+    margin: 0 auto 0 auto;
+    width: max-content;
+    height: max-content;
+}
+
+.loading-animation {
+    height: 50px;
+    width: auto;
+}
+
+.loading-animation-wrapper {
+    display: none;
+    margin: 0 auto 0 auto; 
+    text-align: center;
+}
+
+.missing-artist-info {
+    margin: 10px 0 10px 0;
+    text-align: center;
+    font-size: 20px;
+}
+
+.no-result-wrapper {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    width: 600px;
+    background-color: rgb(204, 204, 204);
+    border-radius: 15px;
+}
+
+.result-artist {
+	border: none;
+	cursor: pointer;
+    display: inline-block;
+    background-color: #205375;
+    text-decoration: none;
+    min-height: 285px;
+    width: 225px;
+    margin: 0 0 auto 0;
+    padding: 10px 10px 10px 10px;
+}
+
+.result-artist:hover {
+    background-color: #112B3C;
+}
+
+.result-artist-image {
+    display: block;
+    margin: 0 auto 0 auto;
+    height: 195px;
+    width: 195px;
+    border: 5px solid white;
+    border-radius: 50%;
+}
+
+.result-artist-name {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 200px;
+    text-align: center;
+    margin: 10px auto 0 auto;
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.results-wrapper {    
+    position: relative;
+    display: none; 
+    margin: 50px auto 10px auto;
+    white-space: nowrap;
+    overflow-x: scroll;
+    min-height: 300px;
+    width: 1000px;
+}

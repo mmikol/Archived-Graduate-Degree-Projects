@@ -1,0 +1,7 @@
+runtime: nodejs16
+handlers:
+- url: /
+  static_files: dist/artist-search-2.0/index.html
+  upload: dist/artist-search-2.0/index.html
+- url: /
+  static_dir: dist/artist-search-2.0

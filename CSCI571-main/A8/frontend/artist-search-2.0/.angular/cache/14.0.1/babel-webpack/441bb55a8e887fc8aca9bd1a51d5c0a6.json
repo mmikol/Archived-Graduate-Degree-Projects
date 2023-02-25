@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class Artwork {\n  constructor(data) {\n    this.artistID = '';\n    this.artworkID = '';\n    this.title = '';\n    this.date = '';\n    this.image = '';\n    Object.assign(this, data);\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

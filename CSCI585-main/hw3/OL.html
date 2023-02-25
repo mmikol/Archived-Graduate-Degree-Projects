@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>OL</title>
+<script src="https://openlayers.org/api/OpenLayers.js">
+</script>
+<style>
+#map {
+    width:400px;
+    height:400px;
+}
+</style>
+</head>
+
+<body>
+<div id="map"></div>
+
+
+<script>
+const locations = {
+    "coordinates": [
+        {"name": "home", "lat":34.01674, "lon":-118.28250},
+        {"name": "gec", "lat":34.020654, "lon":-118.280298},
+        {"name": "bks", "lat":34.020753, "lon":-118.286338},
+        {"name": "jkp", "lat":34.019003, "lon":-118.283034},
+        {"name": "dml", "lat":34.020439, "lon":-118.284206},
+        {"name": "lvl", "lat":34.021716, "lon":-118.282933},
+        {"name": "iyh", "lat":34.018645, "lon":-118.288265},
+        {"name": "sal", "lat":34.019390, "lon":-118.289556},
+        {"name": "sgm", "lat":34.021228, "lon":-118.289257},
+        {"name": "cfx", "lat":34.022219, "lon":-118.288550},
+        {"name": "lrc", "lat":34.024359, "lon":-118.287912},
+        {"name": "mus", "lat":34.022996, "lon":-118.285140},
+        {"name": "shr", "lat":34.023551, "lon":-118.281753},
+    ]};
+
+localStorage.setItem("sampledLocationData",JSON.stringify(locations));
+
+const dataStored = JSON.parse(localStorage.getItem("sampledLocationData"));
+// verify that we fetched our data correctly
+console.log(dataStored); 
+// we can iterate through our array [of points], like so:
+const coordinates = dataStored.coordinates; // a will contain our array
+for(let indx in coordinates) { // indx is 0,1,2...
+  console.log(coordinates[indx]); // this could be a single point
+}
+
+// here's how to plot points on a map, using OpenLayers:
+// [this is code I mildly modified, from an existing source]
+function initMap() {
+        map = new OpenLayers.Map('map');
+        basemap = new OpenLayers.Layer.OSM("Simple OSM Map");
+        map.addLayer(basemap);
+        markers = new OpenLayers.Layer.Markers("Markers");
+        map.addLayer(markers);
+}// initMap()
+
+function addMarker(latitude, longitude) {
+        const lonLat = new OpenLayers.LonLat(longitude, latitude)
+            .transform(
+                new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
+                map.getProjectionObject() // to Spherical Mercator Projection
+        );
+        const point = new OpenLayers.Marker(lonLat);
+        markers.addMarker(point);
+        map.setCenter(lonLat, 8); // second arg is zoom level
+        //console.log(latitude + ", " + longitude);
+}// addMarker()
+
+// load and setup map layers
+initMap();
+
+// markup the map using stored location coordinates
+for(let l of coordinates) { 
+    addMarker(l["lat"], l["lon"]);
+}
+</script>
+
+</body>
+
+</html>

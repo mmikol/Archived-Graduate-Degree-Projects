@@ -1,0 +1,12 @@
+<div class="card-group artist-result-list d-flex mx-auto w-75 flex-row flex-nowrap pb-3 mt-3 mb-1" *ngIf="artistResultsLoaded && artistResultsFound">
+    <button class="card artist-card" [style.background-color]="(chosen == i) ? '#112B3C' : '#205375'" *ngFor="let artist of artists; let i = index;" (click)="chosen = i; expandArtist(artist.id)">
+        <img class="card-img-top" src="{{ artist.image }}" alt="Card image cap">
+        <div class="card-body pt-1 pb-0">
+            <p class="card-title text-white text-start fs-6">{{ artist.name }}</p>
+        </div>
+    </button>
+</div>
+<div class="alert alert-danger w-75 mx-auto" role="alert" *ngIf="artistResultsLoaded && !artistResultsFound">No results.</div>
+<div class="row mt-2">
+    <div class="spinner-border mx-auto" role="status" [hidden]="!showSpinner"></div>      
+</div>

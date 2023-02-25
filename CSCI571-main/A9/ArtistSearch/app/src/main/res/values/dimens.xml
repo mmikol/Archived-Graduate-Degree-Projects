@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="search_result_list_item_height">550dp</dimen>
+    <dimen name="search_result_list_item_width">300dp</dimen>
+    <dimen name="search_result_name_width">55dp</dimen>
+    <dimen name="margin_medium">5dp</dimen>
+</resources>

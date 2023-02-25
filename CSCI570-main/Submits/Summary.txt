@@ -1,0 +1,12 @@
+Contributions: I was solo.
+
+Insights/observations: 
+[1] I checked that both algorithms returned the same optimal costs as others posted in Piazza using the following script: 
+
+print(sum([DELTA if c1 == '_' or c2 == '_' else ALPHA[c1][c2] for c1, c2 in zip(str1, str2)]))
+
+The final alignment may differ due to placement of conditional statements in the traceback function.
+
+[2] The plots are based on 200 points; alignments from length 0 to 200 (problem sizes from n = 0 to n = 400). The strings were randomly generated and given to the algorithm. I chose this many points to show the disparity between the basic and efficient algorithms.
+
+[3] Given that the implementation of the scripts was in Python, I am unsurprised by the plots. The time plot was expected as the divide and conquer solution seeks to trade time for space efficiency. The memory plot was unexpected yet unsurprising as Python carries a lot of overhead. Moreover, RAM usage could only be expected to be high as the efficient solution is recursive versus the iterative basic solution. The key difference is the rate of growth; the efficient algorithm remains generally constant in memory usage while the basic algorithm grows at a significant rate.

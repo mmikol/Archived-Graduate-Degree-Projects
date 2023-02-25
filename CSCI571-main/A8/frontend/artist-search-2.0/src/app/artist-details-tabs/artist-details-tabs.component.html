@@ -1,0 +1,74 @@
+<div class="mx-auto w-75 mb-5" *ngIf="detailsLoaded && artworksLoaded">
+    <ul class="nav nav-pills nav-fill" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="artist-details-tab" data-bs-toggle="tab" data-bs-target="#details" type="button" role="tab" aria-controls="details" aria-selected="true">Artist Info</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="artworks-tab" data-bs-toggle="tab" data-bs-target="#artworks" type="button" role="tab" aria-controls="artworks" aria-selected="true">Artworks</button>
+        </li>
+    </ul>
+    <div class="tab-content pt-3">
+        <div class="tab-pane fade show active" id="details" role="tabpanel" aria-labelledby="artist-details-tab">
+            <p class="artist-info text-center">
+                <span class="artist-name fs-5">{{ details.name }}</span>
+                <span class="artist-birthyear fs-5"> ({{ details.birthday }} - </span>
+                <span class="artist-deathyear fs-5">{{ details.deathday }})</span>
+            </p>
+            <p class="artist-nationality text-center">{{ details.nationality }}</p>
+            <p class="missing-artist-info text-center fs-5">{{ missing }}</p>
+            <p class="artist-biography">{{ details.biography }}</p>
+        </div>
+        <div class="tab-pane fade artist-artworks-list" id="artworks" role="tabpanel" aria-labelledby="artworks-tab">
+            <div class="alert alert-danger w-100 mx-auto" role="alert" *ngIf="artworks.length <= 0">
+                No artworks.
+            </div>
+            <div class="card-columns pb-3 mb-1">
+                <div class="row">
+                    <div class="col d-flex justify-content-center mb-3" *ngFor="let artwork of artworks">
+                        <div class="card h-100 d-flex flex-column justify-content-between artwork-card">
+                            <img class="card-img-top" src="{{ artwork.image }}" alt="Card image cap">
+                            <div class="card-footer text-muted mx-auto w-100 pb-2">
+                                <p class="text-center fs-6">{{ artwork.title }}</p>
+                                <p class="text-center fs-6">{{ artwork.date }}</p>    
+                                <button class="btn btn-primary btn-sm artwork-card-button active w-75" data-bs-toggle="modal" data-bs-target="#geneModal" (click)="expandArtistGenes(artwork.id, artwork.title, artwork.image, artwork.date)">Categories</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal artwork-genes-list modal-lg fade" id="geneModal" tabindex="-1" aria-labelledby="geneModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+            <img class="modal-image" src="{{ modalThumbnail }}">
+            <p class="modal-title text-start" id="geneModal">{{ modalTitle }}<br/>{{ modalYear }}</p>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row mt-2">
+                <div class="spinner-border mx-auto" role="status" [hidden]="!showSpinner"></div>      
+            </div>
+            <div class="card-columns pb-3 mb-1">
+                <div class="row">
+                    <div class="col d-flex justify-content-center mb-3" *ngFor="let gene of genes">
+                        <div class="card h-100 d-flex flex-column justify-content-between gene-card">
+                            <img class="card-img-top" src="{{ gene.image }}">
+                            <div class="card-footer text-muted mx-auto w-100 pb-2">
+                                <p class="card-title mt-auto text-center fs-6">{{ gene.name }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="alert alert-danger w-100 mx-auto" role="alert" *ngIf="genes.length <= 0 && genesRequested">
+                No categories.
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

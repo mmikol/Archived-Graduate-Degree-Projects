@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class ArtistGene {\n  constructor(data) {\n    this.name = '';\n    this.image = '';\n    Object.assign(this, data);\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

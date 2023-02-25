@@ -1,0 +1,1 @@
+python3 6771578924_basic.py input.txt

@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class Artist {\n  constructor(data) {\n    Object.assign(this, data);\n    if (this.image == '/assets/shared/missing_image.png') this.image = './assets/artsy_logo.svg';\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

@@ -1,0 +1,86 @@
+button.card.artist-card:hover {
+    background-color: #112B3C !important;
+}
+
+header {
+    background-color: #F1F1F1 !important;
+}
+
+.artist-link {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+}
+
+.artist-result-list  {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+}
+
+.artist-artworks-list, .artwork-genes-list {
+    overflow-y: auto;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.artist-card {
+    border: none;
+    margin-right: 1px;
+}
+
+.artist-card, .artwork-card, .gene-card {
+    min-width: 12rem;
+    max-width: 15rem;
+    border-radius: 0 !important;
+    padding: 0;
+}
+
+.artwork-card-button, .nav > .nav-item > .active, #searchButton{
+    background-color: #205375 !important;
+}
+
+.artwork-card, .gene-card {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.artist-card:last-of-type {
+    margin-right: 0 !important;
+}
+
+.artist-card > .card-img-top, .artwork-card > .card-img-top, .gene-card > .card-img-top{
+    min-width: 12rem;
+    max-width: 15rem;
+    min-height: 11rem;
+    max-height: 15rem;
+    border-radius: 0 !important;
+}
+
+.card-footer {
+    background: transparent;
+    border-top: 0px;
+}  
+
+.footer, header {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.footer {
+    background-color: #112B3C !important;
+}
+
+.gene-card {
+    min-height: max-content;
+}
+
+.gene-card-body {
+    position: absolute;
+    bottom: 0;
+}
+
+.modal-image {
+    width: 75px;
+    height: auto;
+}

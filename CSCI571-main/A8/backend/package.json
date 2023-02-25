@@ -1,0 +1,25 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "backend for artist search app",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmikol/mmikol.github.io.git"
+  },
+  "author": "Miliano Mikol",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmikol/mmikol.github.io/issues"
+  },
+  "homepage": "https://github.com/mmikol/mmikol.github.io#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.1"
+  }
+}

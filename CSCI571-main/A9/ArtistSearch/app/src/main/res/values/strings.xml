@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ArtistSearch</string>
+    <string name="search_hint">Search&#8230;</string>
+    <string name="artsy_api_link">
+        <a href="https://www.artsy.net/">Powered by Artsy.</a>
+    </string>
+    <string name="loading_text">loading&#8230;</string>
+    <string name="no_search_results">No Result Found</string>
+    <string name="no_artwork_results">No Artwork Available</string>
+    <string name="no_gene_results">No Category Available</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

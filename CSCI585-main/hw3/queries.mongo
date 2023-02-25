@@ -1,0 +1,3 @@
+{ popularity: {$gte: 50} }
+
+
